@@ -1,6 +1,0 @@
-This logo was generated using the following font:
-
-- Font Title: Passions Conflict
-- Font Author: Copyright 2004 The Hurricane Project Authors (https://github.com/googlefonts/passions-conflict)
-- Font Source: http://fonts.gstatic.com/s/passionsconflict/v7/kmKnZrcrFhfafnWX9x0GuEC-zowow5NeYRI4CN2V.ttf
-- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))

@@ -1,13 +1,13 @@
-# portifolio
+# Portfolio
 Portifólio do desenvolvedor
 
 ##
 Tarefas
 O controle das tarefas deste peojeto será realizado no Github
 
-## Ícons
+## Ícones
 
-:package: Novas funcionalidades
-:up: atualização
-:beatle: correção de bugs
-:checkered: release
+- :package: Novas funcionalidades
+- :up: atualização
+- :beetle: correção de bugs
+- :checkered_flag: release

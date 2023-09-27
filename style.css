@@ -4,10 +4,79 @@
   * {
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
     box-sizing: border-box;
   }
+  :root{
+    --font-primary:'Baloo Da 2', serif;
+    --font-secundaria:"Josefin Slab", serif;
+    --font-action :"Muli", serif;
+  }
+  .hamburguer{
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    z-index: 100;
+    right: 2rem;
+    top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
 
-  .header{
+  }
+  .show-menu .hamburguer{
+    right: 15rem;
+  }
+
+  .line{
+    width: 100%;
+    height: 0.1rem;
+    background-color: #fff;
+    box-shadow: .1rem .1rem 2px #000;
+    transition: 1s;
+  }
+  .show-menu #line1{
+    transform: rotate(45deg) translate(.3rem, .45rem);
+  }
+  .show-menu #line2{
+    opacity: 0;
+    visibility: hidden;
+  }
+  .show-menu #line3{
+    transform: rotate(-45deg) translate(.3rem, -.45rem);
+  }
+  /* aviso de fechar */
+  .hamburguer span{
+      position: absolute;
+      left: 3rem;
+      height: 2rem;
+      width: 6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #a044ff ;
+      color: #fff;
+      font-family: var(--font-action);
+      opacity: 0;
+  }
+  /* seta do span fecha */
+  .hamburguer span::before{ 
+    content: "";
+    position: absolute;
+    border-top:.5rem solid transparent;
+    border-right:.5rem solid #a044ff;
+    border-left: .5rem solid transparent;
+    border-bottom: .5rem solid transparent;
+    left: -1rem;
+  }
+  .show-menu .hamburguer:hover span{
+    opacity: 1;
+  }
+
+
+  header{
     width: 100%;
     height: 100vh;
     overflow: hidden; /*não deixa o site passar da tela, qnd elememto fica maior, nao vai gera a barra rolagem*/
@@ -40,10 +109,11 @@
     top: 30%;
     left: 15%;
   }
+
   .banner h1{
     color: #ffff;
     font-size: 3.5rem;
-    font-family: "Baloo Da 2", serif;
+    font-family: var(--font-primary);
     font-weight: 200;
     text-shadow: .2rem .3rem 2px rgba(0, 0, 0, .4);
     margin-bottom: 2rem;
@@ -51,7 +121,7 @@
     animation: moveBanner 1s .5s forwards;
   }
   .banner p{
-    font-size: "Josefin Slab", serif;
+    font-size: var(--font-secundaria);
     color:#fff;
     font-size: 2rem;
     text-shadow: .2rem .3rem 2px rgba(0, 0, 0, .4);
@@ -61,7 +131,7 @@
   }
 
   .banner button{
-    font-family: "Muli", serif;
+    font-family: var(--font-action);
     background-image: linear-gradient(43deg, #4518d8 0%, #9a2b92 46%, #e29914 100%);
     box-shadow: .2rem .3rem 2px rgba(0, 0, 0, .3);
     letter-spacing: .1rem;
@@ -73,7 +143,13 @@
     cursor: pointer;
     opacity: 0;
     animation: moveBanner 1s .9s forwards;
-    
+
+  }
+
+  .banner button:hover{
+    color: #001122;
+    font-size:1.6rem ;
+    transition: .2s;
   }
   @keyframes moveBanner{
     0%{
@@ -84,10 +160,56 @@
       opacity: 1;
     }
   }
-
-  .banner button:hover{
-    color: #001122;
-    font-size:1.6rem ;
-    transition: .2s;
+  .sidebar{
+    width: 20rem;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    top :0;
+    right: -20rem;
+    transition: all .5s;
   }
- 
+  .show-menu .sidebar{
+    right: 0;
+  }
+  .menu{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .menu-item{
+    text-align: center;
+    margin-bottom: .5rem;
+  }
+  .menu-link{
+    font-family: var(--font-action);
+    font-size: 2rem;
+    color: #555;
+    transition: color 1s ;
+  }
+  .menu-link:hover{
+    color: #9a2b92;
+  }
+  .social-media{
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .social-media i {
+    background-color: rgb(3, 75, 243);
+    color: #fff;
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 1s;
+  }
+  .social-media i:hover{
+     background-color: #9a2b92;
+  }

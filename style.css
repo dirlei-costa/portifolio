@@ -15,6 +15,10 @@
     --font-action: "Muli", serif;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   .hamburguer {
     width: 2rem;
     height: 2rem;
@@ -188,6 +192,7 @@
     top: 0;
     right: -20rem;
     transition: all .5s;
+    z-index: 80;
   }
 
   .show-menu .sidebar {
@@ -226,8 +231,6 @@
   }
 
   .social-media i {
-
-    color: #fff;
     height: 2.5rem;
     width: 2.5rem;
     font-size: 1.5rem;
@@ -236,6 +239,8 @@
     justify-content: center;
     border-radius: 50%;
     transition: background-color 1s;
+    z-index: 200;
+
   }
 
   .social-media i:hover {
@@ -583,7 +588,7 @@
 
   .session-cost label {
     font-family: var(--font-secundaria);
-    font-size: 1.rem;
+    font-size: 1.3rem;
     font-weight: bold;
   }
 
@@ -601,12 +606,66 @@
   .btn-cost {
     text-transform: uppercase;
     padding: 1rem;
-    grid-column: 2;
     cursor: pointer;
-    background-color: #4518d8;
+    grid-column: 2;
 
   }
 
   .btn-cost:hover {
     background-color: #0257f5;
+  }
+
+  footer {
+    width: 100%;
+    height: 7rem;
+    background-color: #17181b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .footer-content {
+
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-content p {
+    color: #a7a7a7;
+    font-family: var(--font-secundaria);
+    font-size: 1.2rem;
+  }
+
+  .social-list a {
+    margin: 0 2rem;
+    color: #a7a7a7;
+    font-size: 1.3rem;
+  }
+
+  .social-list i:hover {
+    color: #006aff;
+    font-size: 1.5rem;
+  }
+
+  .social-list ul {
+    display: flex;
+  }
+
+  #link-top {
+    position: fixed;
+    right: 3rem;
+    bottom: 3rem;
+    width: 3rem;
+    height: 3rem;
+    background: #006aff;
+    background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+    background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: .3rem;
+    box-shadow: 0 .1rem .6rem #00000009;
   }
